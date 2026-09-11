@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Sidebar for ChatGPT</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3.75 6.75A2.25 2.25 0 0 1 6 4.5h3.1c.6 0 1.17.24 1.59.66l1.18 1.18c.14.14.33.22.53.22H18A2.25 2.25 0 0 1 20.25 8.8v7.45A2.25 2.25 0 0 1 18 18.5H6a2.25 2.25 0 0 1-2.25-2.25v-9.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h1>Project sidebar</h1>
+          <p id="summary">Reading learned projects…</p>
+        </div>
+      </header>
+
+      <section id="consent" class="consent" hidden aria-label="Privacy disclosure">
+        <strong>Private by design</strong>
+        <p>This extension reads project names, chat titles, and ChatGPT URLs to build your grouped sidebar. The data stays in Chrome storage and is never transmitted.</p>
+        <button id="accept" class="primary" type="button">Enable project grouping</button>
+        <a href="https://github.com/imranbarbhuiya/chatgpt-project-sidebar/blob/main/PRIVACY.md" target="_blank" rel="noreferrer">Read the privacy policy</a>
+      </section>
+
+      <section id="preferences" aria-label="Preferences">
+        <label>
+          <span><strong>Group project chats</strong><small>Replace project-tagged recents with project sections.</small></span>
+          <input id="enabled" type="checkbox" />
+        </label>
+        <label>
+          <span><strong>Show learned chats</strong><small>Include every chat learned from visited project pages.</small></span>
+          <input id="showLearnedChats" type="checkbox" />
+        </label>
+        <label>
+          <span><strong>Collapse other projects</strong><small>Keep only the current project expanded.</small></span>
+          <input id="collapseOthers" type="checkbox" />
+        </label>
+      </section>
+
+      <div class="actions">
+        <button id="openProjects" class="primary" type="button">Open Projects</button>
+        <button id="clear" type="button">Clear learned data</button>
+      </div>
+      <p class="footnote">Visit a project page once to learn its complete chat list. Everything stays in this browser.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
