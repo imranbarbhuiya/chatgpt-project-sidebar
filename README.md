@@ -2,6 +2,8 @@
 
 A privacy-first Chrome extension that groups ChatGPT's recent conversations under their projects, similar to the desktop ChatGPT sidebar.
 
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/cciaaeldlcahjdeejfnechbkchbdfkgk)**
+
 ![Project Sidebar for ChatGPT](assets/store/marquee.png)
 
 ## Preview
